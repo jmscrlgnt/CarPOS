@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{A4C0E55C-4B78-4BCA-9E3B-30F3A32A6F3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CarDealershipPOS.Program</StartupObject>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>CarDealershipPOS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <Deterministic>true</Deterministic>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget><Prefer32Bit>false</Prefer32Bit><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><DefineDebug>true</DefineDebug><DefineTrace>true</DefineTrace><OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget><Prefer32Bit>false</Prefer32Bit><DebugType>pdbonly</DebugType><DefineDebug>false</DefineDebug><DefineTrace>true</DefineTrace><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.Drawing" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" /><Import Include="System" /><Import Include="System.Collections" /><Import Include="System.Collections.Generic" /><Import Include="System.Data" /><Import Include="System.Drawing" /><Import Include="System.Diagnostics" /><Import Include="System.Windows.Forms" /><Import Include="System.Linq" /><Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Database.vb" />
+    <Compile Include="Data\Repositories\UserRepository.vb" />
+    <Compile Include="Data\Repositories\VehicleRepository.vb" />
+    <Compile Include="Data\Repositories\CustomerRepository.vb" />
+    <Compile Include="Forms\AuditLogForm.Designer.vb">
+      <DependentUpon>AuditLogForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuditLogForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerEditorForm.Designer.vb">
+      <DependentUpon>CustomerEditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerEditorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomersForm.Designer.vb">
+      <DependentUpon>CustomersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.Designer.vb">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.Designer.vb">
+      <DependentUpon>InventoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentsForm.Designer.vb">
+      <DependentUpon>PaymentsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PosForm.Designer.vb">
+      <DependentUpon>PosForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PosForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuotationsForm.Designer.vb">
+      <DependentUpon>QuotationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuotationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReceiptForm.Designer.vb">
+      <DependentUpon>ReceiptForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReceiptForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalesForm.Designer.vb">
+      <DependentUpon>SalesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.vb">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetupAdminForm.Designer.vb">
+      <DependentUpon>SetupAdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetupAdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UiTheme.vb" />
+    <Compile Include="Forms\UserEditorForm.Designer.vb">
+      <DependentUpon>UserEditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserEditorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagementForm.Designer.vb">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VehicleEditorForm.Designer.vb">
+      <DependentUpon>VehicleEditorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VehicleEditorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Customer.vb" />
+    <Compile Include="Models\Payment.vb" />
+    <Compile Include="Models\Quotation.vb" />
+    <Compile Include="Models\Sale.vb" />
+    <Compile Include="Models\User.vb" />
+    <Compile Include="Models\Vehicle.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Security\PasswordSecurity.vb" />
+    <Compile Include="Services\AuditService.vb" />
+    <Compile Include="Services\AuthService.vb" />
+    <Compile Include="Services\BackupService.vb" />
+    <Compile Include="Services\CustomerService.vb" />
+    <Compile Include="Services\InventoryService.vb" />
+    <Compile Include="Services\PaymentService.vb" />
+    <Compile Include="Services\QuotationService.vb" />
+    <Compile Include="Services\ReportService.vb" />
+    <Compile Include="Services\SalesService.vb" />
+    <Compile Include="Services\SessionContext.vb" />
+    <Compile Include="Services\SettingsService.vb" />
+    <Compile Include="Utilities\AppPaths.vb" />
+    <Compile Include="Utilities\VehicleImageStorage.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AuditLogForm.resx">
+      <DependentUpon>AuditLogForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerEditorForm.resx">
+      <DependentUpon>CustomerEditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomersForm.resx">
+      <DependentUpon>CustomersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryForm.resx">
+      <DependentUpon>InventoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentsForm.resx">
+      <DependentUpon>PaymentsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PosForm.resx">
+      <DependentUpon>PosForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuotationsForm.resx">
+      <DependentUpon>QuotationsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalesForm.resx">
+      <DependentUpon>SalesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetupAdminForm.resx">
+      <DependentUpon>SetupAdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserEditorForm.resx">
+      <DependentUpon>UserEditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VehicleEditorForm.resx">
+      <DependentUpon>VehicleEditorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\schema.sql"><LogicalName>CarDealershipPOS.Data.schema.sql</LogicalName></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite">
+      <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="SourceGear.sqlite3" GeneratePathProperty="true">
+      <Version>3.53.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="CopyNativeSQLiteRuntime" AfterTargets="Build">
+    <PropertyGroup>
+      <NativeSQLiteSource>$(PkgSourceGear_sqlite3)\runtimes\win-x64\native\e_sqlite3.dll</NativeSQLiteSource>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(NativeSQLiteSource)')" Text="Native SQLite runtime e_sqlite3.dll was not found. Restore NuGet packages and rebuild the solution." />
+    <Copy SourceFiles="$(NativeSQLiteSource)" DestinationFiles="$(TargetDir)e_sqlite3.dll" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
