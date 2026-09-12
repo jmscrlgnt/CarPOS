@@ -1,5 +1,20 @@
 # AutoDrive Car Dealership POS — Setup & Usage Instructions
 
+## Quick Start
+
+For users who already have Visual Studio and .NET Framework 4.8 installed:
+
+1. Clone or download the repository.
+2. Open `CarDealershipPOS.sln` in Visual Studio.
+3. Confirm the solution platform is set to `x64`.
+4. Restore NuGet packages.
+5. Select **Build > Rebuild Solution**.
+6. Press **F5** to start AutoDrive.
+
+> If the application fails to load SQLite, confirm that `e_sqlite3.dll` exists in the build output and that the solution is not using `Any CPU`.
+
+---
+
 ## Requirements
 
 Before running the project, install:
